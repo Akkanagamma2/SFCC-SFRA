@@ -1,0 +1,2 @@
+<label for="backText">${Resource.msg('label.backText', 'common', null)}</label>
+<input class="backText-select form-control" type="text" name="backText_P" id="backText" maxlength="${product.frontTextLength_P}" value="">

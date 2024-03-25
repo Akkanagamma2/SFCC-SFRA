@@ -1,0 +1,3 @@
+<a href="${URLUtils.url("GetProduct-Show","pid","1234")}" class="get-product-name">
+    <isprint value="Get Product Name" encoding="on" />
+</a>

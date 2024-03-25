@@ -1,0 +1,21 @@
+
+<isprint value="${Resource.msgf("label.ass22_email.mail","ass22",null,pdict.Fname,pdict.Lname)}" encoding="on" /><br>
+
+<isprint value="${Resource.msg("label.ass22_email.statement","ass22",null)}" encoding="on" />
+
+<isloop items="${pdict.category}" var="cat" status="loopstatus">
+    <br>
+    <b><isprint value="${cat.value}" encoding="on" /></b>
+</isloop>
+
+<br>
+<br>
+<isprint value="${Resource.msg("label.ass22_email.thanks","ass22",null)}" encoding="on" /><br>
+<isprint value="${Resource.msg("label.ass22_email.team","ass22",null)}" encoding="on" /> 
+
+
+
+
+
+
+

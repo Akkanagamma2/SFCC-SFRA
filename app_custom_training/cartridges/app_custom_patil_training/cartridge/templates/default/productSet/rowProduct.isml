@@ -1,0 +1,12 @@
+
+<isloop items="${pdict.ProductList}" var="plst" status="loopstatus">
+            <tr>
+                <td><isprint value="${plst.ID}" encoding="on" /></td>
+                <td><isprint value="${plst.name}" encoding="on" /></td>
+                <td><isprint value="${plst.brand}" encoding="on" /></td>
+                <td><isprint value="${plst.shortDescription}" encoding="on" /></td>
+            </tr>
+</isloop>
+
+
+

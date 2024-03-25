@@ -1,0 +1,2 @@
+
+<isinclude url="{URLUtils.url('Product-Show','pid',${pdict.prod1.ID})}"  />

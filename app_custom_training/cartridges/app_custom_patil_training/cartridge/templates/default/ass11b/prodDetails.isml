@@ -1,0 +1,6 @@
+<isif condition="${pdict.Prodetails==null}">
+    <h1>page not found</h1>
+<iselse/>
+    <isredirect location="${URLUtils.url("Product-Show",'pid',pdict.Prodetails.ID)}" permanent="false">
+</isif>
+

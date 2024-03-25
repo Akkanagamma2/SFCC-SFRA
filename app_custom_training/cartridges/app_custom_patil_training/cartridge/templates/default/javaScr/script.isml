@@ -1,0 +1,4 @@
+
+<h1>${pdict.Id}</h1>
+<h1>${pdict.Name}</h1>
+<h1>${pdict.Brand}</h1>

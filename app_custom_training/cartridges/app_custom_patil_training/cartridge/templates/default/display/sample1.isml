@@ -1,0 +1,38 @@
+
+
+<isset name="val" value="200" scope="page" />
+<div id="<isprint encoding="htmldoublequote" value="${val}"/>"></div>
+<h3><isprint value="${val}" /></h3>
+<h3><isprint value="${val}" formatter=""/></h3>
+
+<br>
+<h1><isprint value="${new Date()}" style="DATE_LONG" timezone="INSTANCE"></h1>
+<br>
+<h1><isprint value="${new Date()}" style="DATE_TIME" timezone="INSTANCE"></h1>
+<br>
+<h1><isprint value="${new Date()}" formatter="EEE, MMM d, yy" timezone="INSTANCE"></h1>
+<br>
+<h1><isprint value="${new Date()}" formatter="h a" timezone="INSTANCE"></h1>
+
+<h1><isprint value="${new Date()}" formatter="K a, z" timezone="INSTANCE"></h1>
+<br>
+<isprint value = "#'straifgt'#" padding = "+6">
+
+<isprint value="${"<h1>"+ val +" this is the number"+"</h1>" }" encoding="off" />
+
+
+
+<isset name="x" value="200" scope="page" />
+<isprint value="${"<h3> The value of x is - "+x+"</h3>"}" encoding="off" />
+
+<h1><isprint value="${new Date()}" style="DATE_TIME" timezone="SITE"/></h1>
+
+<isprint value="${plst.priceModel.maxPrice}" formatter = "*#00.0#" encoding="on"/>
+
+
+
+
+
+
+
+

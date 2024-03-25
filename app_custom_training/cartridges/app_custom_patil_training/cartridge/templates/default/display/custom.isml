@@ -1,0 +1,5 @@
+
+
+<h1><isprint value="${pdict.id}" encoding="on" /></h1>
+<h1><isprint value="${pdict.name}" encoding="on" /></h1>
+<h1><isprint value="${pdict.brand}" encoding="on" /></h1>

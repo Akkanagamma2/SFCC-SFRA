@@ -1,0 +1,3 @@
+
+<isredirect location="${URLUtils.url("ContentAsset-Show")}" permanent="false"/>
+

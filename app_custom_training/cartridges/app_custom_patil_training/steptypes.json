@@ -1,0 +1,37 @@
+{
+  "step-types":
+  {
+    "script-module-step":
+    [
+      {
+        "@type-id":"custom.categoryAssn30",
+        "@supports-parallel-execution":"true",
+        "@supports-site-context":"true",
+        "@supports-organization-context":"false",
+        "description":"get category path",
+        "module":"app_custom_patil_training/cartridge/scripts/jobs/jobCategory30.js",
+        "function":"Category",
+        "transactional":"true",
+        "timeout-in-seconds":"900",
+        "status-codes":
+        {
+          "status":
+            [
+              {
+                "@code": "ERROR",
+                "description": "Used when the step failed with an error."
+              },
+              {
+                "@code": "FINISHED",
+                "description": "Used when the step finished successfully."
+              },
+              {
+                "@code": "FINISHED_WITH_WARNINGS",
+                "description": "Used when the step finished with warnings."
+              }
+            ]
+        }
+      }
+    ]
+  }
+}

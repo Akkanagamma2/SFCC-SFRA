@@ -1,0 +1,96 @@
+<style>
+
+    .form-group{
+        padding:10px;
+        margin:5px;
+    }
+</style>
+
+<form action="https://zylt-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-RefArch-Site/en_US/">
+
+    
+    <div class="form-group
+        <isif condition="${!!pdict.subscribe.email.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-email">
+             <isprint value="${pdict.subscribe.email.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-email"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-email-error"
+            <isprint value=${pdict.subscribe.email.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-email-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.subscribe.firstname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-fname">
+            <isprint value="${pdict.subscribe.firstname.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-fname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-fname-error"
+            <isprint value=${pdict.subscribe.firstname.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-fname-error"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="subscribe-form-category">
+            <isprint value="${Resource.msg("label.form.category","ass22",null)}" encoding="htmlcontent" />
+        </label>
+    </div>
+
+
+    <div class="form-group">
+        <input type="checkbox" id="check-mens"
+        <isprint value=${pdict.subscribe.cat.mens.attributes} encoding="off" />>
+        <label for="check-mens">
+            <isprint value="${pdict.subscribe.cat.mens.label}" encoding="on" />
+        </label>
+    </div>
+
+    <div class="form-group">
+        <input type="checkbox" id="check-womens"
+        <isprint value=${pdict.subscribe.cat.womens.attributes} encoding="off" />>
+        <label for="check-womens">
+            <isprint value="${pdict.subscribe.cat.womens.label}" encoding="on" />
+        </label>
+    </div>
+
+    <div class="form-group">
+        <input type="checkbox" id="check-electronics"
+        <isprint value=${pdict.subscribe.cat.electronics.attributes} encoding="off" />>
+        <label for="check-electronics">
+            <isprint value="${pdict.subscribe.cat.electronics.label}" encoding="on" />
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for="country">
+            <isprint value="${pdict.subscribe.country.label}" encoding="htmlcontent" />
+        </label>
+        <select  id="country"
+            <isprint value="${pdict.subscribe.country.attributes}" encoding="off" />
+            >
+            <isloop items=${pdict.subscribe.country.options} var="state">
+                <option id="${state.id}" value="${state.htmlValue}" <isif condition="${state.selected}">selected</isif>>${state.label || ' '}</option>
+            </isloop>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <button type="Submit">
+            ${Resource.msg("label.form.submit","ass22",null)}
+        </button>
+    </div>
+    
+
+</form>

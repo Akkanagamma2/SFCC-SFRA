@@ -1,0 +1,8 @@
+
+<h3><isprint value="${Resource.msgf("label.ass22_msg.thankyou","ass22",null,pdict.FName,pdict.LName)}" encoding="on" /><br></h3>
+
+<isprint value="${Resource.msgf("label.ass22_msg.alert","ass22",null,pdict.FName,pdict.LName)}" encoding="on" />
+
+
+
+

@@ -1,0 +1,54 @@
+<isdecorate template="common/layout/page">
+
+    <style>
+        h2{
+            font-family:'Acme', sans-serif;
+            padding:20px 0 0 20px;
+            font-weight:20px;
+            color:#305C96;
+        }
+        table{
+            margin:20px;
+            width:70%;
+            height:50px;
+            text-align:center;
+        }
+        table, th, td{
+            border:2px solid black;
+            padding:5px;
+        }
+        table th{
+            color:#80036B;
+            font-size:20px;
+        }
+        h4{
+            font-family:'Acme', sans-serif;
+            padding:5px 0 0 20px;
+            font-weight:20px;
+        }
+    </style>
+
+    <h2>Basket Items</h2>
+    <table>
+        <tr>
+            <th>ProductID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Quantity</th>
+        </tr>
+
+        <isloop items="${pdict.basketItems}" var="plg" status="loopstatus">
+            <tr>
+
+                    <td><isprint value="${plg.productID}" encoding="on" /></td>
+                    <td><isprint value="${plg.productName}" encoding="on" /></td>
+                    <td><isprint value="${plg.price}" encoding="on" /></td>
+                    <td><isprint value="${plg.product.classificationCategory.displayName}" encoding="on" /></td>
+                    <td><isprint value="${plg.quantity}" encoding="on" /></td>
+
+            </tr>
+        </isloop>
+    </table>
+
+</isdecorate>

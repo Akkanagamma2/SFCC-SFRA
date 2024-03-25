@@ -1,0 +1,3 @@
+
+<isprint value="${pdict.Content.custom.body}" encoding="on" />
+<isprint value="${pdict.Content.getID()}" encoding="on" />

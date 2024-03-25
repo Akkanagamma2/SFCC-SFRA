@@ -1,0 +1,58 @@
+<isdecorate template="common/layout/page">
+
+    <style>
+        h2{
+            font-family:'Acme', sans-serif;
+            padding:20px 0 0 20px;
+            font-weight:20px;
+            color:#305C96;
+        }
+        table{
+            margin:20px;
+            width:70%;
+            height:50px;
+            text-align:center;
+        }
+        table, th, td{
+            border:2px solid black;
+            padding:5px;
+        }
+        table th{
+            color:#80036B;
+            font-size:20px;
+        }
+        h4{
+            font-family:'Acme', sans-serif;
+            padding:5px 0 0 20px;
+            font-weight:20px;
+        }
+    </style>
+
+    <h2>Order Details</h2>
+    <table>
+        <tr>
+            <th>OrderNo</th>
+            <th>Billing First Name</th>
+            <th>Billing Last Name</th>
+            <th>Sub Total</th>
+            <th>Tax</th>
+            <th>Shipping Cost</th>
+            <th>Order Total</th>
+        </tr>
+
+        <isloop items="${pdict.orders}" var="plg" status="loopstatus">
+            <tr>
+
+                    <td><isprint value="${plg.orderNo}" encoding="on" /></td>
+                    <td><isprint value="${plg.billingAddress.firstName}" encoding="on" /></td>
+                    <td><isprint value="${plg.billingAddress.lastName}" encoding="on" /></td>
+                    <td><isprint value="${plg.totalNetPrice}" encoding="on" /></td>
+                    <td><isprint value="${plg.totalTax}" encoding="on" /></td>
+                    <td><isprint value="${plg.shippingTotalGrossPrice}" encoding="on" /></td>
+                    <td><isprint value="${plg.totalGrossPrice}" encoding="on" /></td>
+
+            </tr>
+        </isloop>
+    </table>
+
+</isdecorate>

@@ -1,0 +1,8 @@
+<tr>
+    <td><isprint value="${pdict.id}" encoding="on" /></td>
+    <td><isprint value="${pdict.name}" encoding="on" /></td>
+    <td><isprint value="${pdict.brand}" encoding="on" /></td>
+</tr>
+
+
+

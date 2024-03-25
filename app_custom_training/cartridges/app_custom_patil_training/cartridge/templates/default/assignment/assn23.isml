@@ -1,0 +1,118 @@
+<style>
+    h2{
+        padding-left:20px;
+    }
+    form{
+        margin-top : 20px; 
+        text-align:left;
+    }
+    .form-group{
+        padding:7px;
+        margin:5px;
+    }
+    label:first-child{
+        padding:10px;
+    }
+    input{
+        border-radius:3px;
+        padding-left:5px;
+    }
+    input:focus {
+        border: 2px solid #555;
+    }
+
+</style>
+
+<form action="${pdict.actionUrl}" method="post">
+
+    <h2>${Resource.msg("Form.header.display",'forms',null)}</h2>
+    <div class="form-group">
+        <label for="subscribe-form-email">
+            <isprint value="${pdict.subscribe.email.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="email"
+            id="subscribe-form-email"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            <isprint value=${pdict.subscribe.email.attributes} encoding="off" />>
+            <isif condition="${!pdict.subscribe.email.valid}">
+                <span style="color:red"><isprint value="${pdict.subscribe.email.error}" encoding="on" /></span>
+            </isif>
+    </div>
+
+    <div class="form-group">
+        <label for="subscribe-form-fname">
+            <isprint value="${pdict.subscribe.firstname.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="subscribe-form-fname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            <isprint value=${pdict.subscribe.firstname.attributes} encoding="off" />>
+    </div>
+
+    <div class="form-group">
+        <label for="subscribe-form-lname">
+            <isprint value="${pdict.subscribe.lastname.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            id="subscribe-form-lname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            <isprint value=${pdict.subscribe.lastname.attributes} encoding="off" />>
+    </div>
+
+    <div class="form-group">
+        <label for="subscribe-form-category">
+            <isprint value="${Resource.msg("label.form.category","ass22",null)}" encoding="htmlcontent" />
+        </label>
+
+        <input type="checkbox" id="check-mens"
+        <isprint value=${pdict.subscribe.cat.mens.attributes} encoding="off" />>
+        <label for="check-mens">
+            <isprint value="${pdict.subscribe.cat.mens.label}" encoding="on" />
+        </label>
+
+        <input type="checkbox" id="check-womens"
+        <isprint value=${pdict.subscribe.cat.womens.attributes} encoding="off" />>
+        <label for="check-womens">
+            <isprint value="${pdict.subscribe.cat.womens.label}" encoding="on" />
+        </label>
+    
+        <input type="checkbox" id="check-electronics"
+        <isprint value=${pdict.subscribe.cat.electronics.attributes} encoding="off" />>
+        <label for="check-electronics">
+            <isprint value="${pdict.subscribe.cat.electronics.label}" encoding="on" />
+        </label>
+
+    </div>
+
+    <div class="form-group">
+        <label for="country">
+            <isprint value="${pdict.subscribe.country.label}" encoding="htmlcontent" />
+        </label>
+        <select  id="country"
+            <isprint value="${pdict.subscribe.country.attributes}" encoding="off" />
+            >
+            <isloop items=${pdict.subscribe.country.options} var="state">
+                <option id="${state.id}" value="${state.htmlValue}" <isif condition="${state.selected}">selected</isif>>${state.label || ' '}</option>
+            </isloop>
+        </select>
+    </div>
+
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+
+    <div class="form-group">
+        <button type="Submit">
+            ${Resource.msg("label.form.submit","ass22",null)}
+        </button>
+    </div>
+
+</form>
+
+

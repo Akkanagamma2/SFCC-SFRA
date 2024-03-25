@@ -1,0 +1,9 @@
+<h3>Hi bro, Rakshabandan is coming</h3>
+
+<h2>${pdict.FirstName}</h2>
+<h2>${pdict.LastName}</h2>
+<h2>${pdict.Message}</h2>
+
+<h3>Reminder</h3>
+${pdict.FirstName} - ${pdict.LastName}
+

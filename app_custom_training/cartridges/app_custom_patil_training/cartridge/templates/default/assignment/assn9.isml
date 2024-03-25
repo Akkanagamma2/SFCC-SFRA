@@ -1,0 +1,53 @@
+<isdecorate template="common/layout/page">
+
+    <style>
+        h2{
+            font-family:'Acme', sans-serif;
+            padding:20px 0 0 20px;
+            font-weight:20px;
+            color:#305C96;
+        }
+        table{
+            margin:20px;
+            width:70%;
+            height:50px;
+            text-align:center;
+        }
+        table, th, td{
+            border:2px solid black;
+            padding:5px;
+        }
+        table th{
+            color:#80036B;
+            font-size:20px;
+        }
+        td{
+            font-size:20px;
+        }
+        h4{
+            font-family:'Acme', sans-serif;
+            padding:5px 0 0 20px;
+            font-weight:20px;
+        }
+
+    </style>
+
+    <h2>Product Details</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>count</th>
+        </tr>
+
+        <isinclude template="assignment/assn9_1" sf-toolkit="on" />
+    </table>
+
+    <isloop items="${pdict.noProductArr}" var="ntplst" status="loopstatus">
+        <h4>Product with Id ${ntplst} not found</h4>
+    </isloop>
+
+</isdecorate>

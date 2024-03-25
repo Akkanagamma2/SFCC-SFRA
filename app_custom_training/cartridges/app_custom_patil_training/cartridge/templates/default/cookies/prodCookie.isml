@@ -1,0 +1,59 @@
+<isdecorate template="common/layout/page">
+
+    <style>
+        h2{
+            font-family:'Acme', sans-serif;
+            padding:20px 0 0 20px;
+            font-weight:20px;
+            color:#305C96;
+        }
+        table{
+            margin:20px;
+            width:70%;
+            height:50px;
+            text-align:center;
+        }
+        table, th, td{
+            border:2px solid black;
+            padding:5px;
+        }
+        table th{
+            font-size:23px;
+            color:#80036B;
+        }
+        td{
+            font-size:19px;
+        }
+
+
+    </style>
+
+    <h2>Cookie Product Details</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+
+        </tr>
+
+        <isloop items="${pdict.List}" var="plst" status="loopstatus">
+            <tr>
+                <td><isprint value="${plst.ID}" encoding="on" /></td>
+                <td><isprint value="${plst.name}" encoding="on" /></td>
+                <td><isprint value="${plst.brand}" encoding="on" /></td>
+
+            </tr>
+        </isloop>
+    </table>
+    <isloop items="${pdict.Notlist}" var="plst" status="loopstatus">
+        <isprint value="${"<h4> product with ID "+plst+" not found </h4>"}" encoding="off" />
+    </isloop>
+</isdecorate>
+
+
+
+
+
+
+

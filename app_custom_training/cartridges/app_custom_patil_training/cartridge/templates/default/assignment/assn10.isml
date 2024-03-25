@@ -1,0 +1,53 @@
+
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<isdecorate template="common/layout/page">
+
+<style>
+        h2{
+            font-family:'Acme', sans-serif;
+            padding:20px 0 0 20px;
+            font-weight:20px;
+            color:#305C96;
+        }
+        table{
+            margin:20px;
+            width:70%;
+            height:50px;
+            text-align:center;
+        }
+        table, th, td{
+            border:2px solid black;
+            padding:5px;
+        }
+        table th{
+            color:#80036B;
+        }
+
+</style>
+
+    <h2>Product Details using Custom Tag</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+        </tr>
+
+        <isloop items="${pdict.List}" var="plst" status="loopstatus">
+            <isproductdetail id="${plst.ID}" name="${plst.name}" brand="${plst.brand}"/>
+        </isloop>
+
+    </table>
+    <isloop items="${pdict.Notlist}" var="plst" status="loopstatus">
+        <isprint value="${"<h2 style=color:black> product with ID "+plst+" not found </h2>"}" encoding="off" />
+    </isloop>
+
+</isdecorate>
+
+
+
+
+
+
+

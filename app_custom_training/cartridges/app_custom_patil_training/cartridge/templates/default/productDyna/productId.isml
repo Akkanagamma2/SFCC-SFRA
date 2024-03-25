@@ -1,0 +1,51 @@
+<isdecorate template="common/layout/page">
+
+    <style>
+        h2{
+            font-family:'Acme', sans-serif;
+            padding:20px 0 0 20px;
+            font-weight:20px;
+            color:#305C96;
+        }
+        table{
+            margin:20px;
+            width:70%;
+            height:50px;
+            text-align:center;
+        }
+        table, th, td{
+            border:2px solid black;
+            padding:5px;
+        }
+        table th{
+            color:#80036B;
+        }
+
+    </style>
+
+    <h2>Product Details</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Description</th>
+        </tr>
+
+        <isloop items="${pdict.ProductList}" var="plst" status="loopstatus">
+            <tr>
+                <td>${plst.name}</td>
+                <td>${plst.ID}</td>
+                <td>${plst.brand}</td>
+                <td>${plst.shortDescription}</td>
+            </tr>
+        </isloop>
+    </table>
+</isdecorate>
+
+
+
+
+
+
+

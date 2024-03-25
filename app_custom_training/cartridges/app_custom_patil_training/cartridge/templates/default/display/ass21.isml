@@ -1,0 +1,9 @@
+<p>Dear ${pdict.FirstName} ${pdict.LastName},</p>
+
+<p>Your cart contains below items.Please visit Shopping Bag <a href="https://zylt-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-RefArch-Site/en_US/Cart-Show">click</a> to checkout.</p>
+
+<isloop items="${pdict.products}" var="prod" status="loopstatus">
+    <isprint value="${loopstatus.count +".  "+ prod.productName+" -  "}" encoding="on" /><a href="https://zylt-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-RefArch-Site/en_US/Product-Show?pid=${prod.productID}">view product </a><br>
+</isloop>
+
+<p>Thanks,<br>Refarch Team.</p>

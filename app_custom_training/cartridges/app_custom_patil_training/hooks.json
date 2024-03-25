@@ -1,0 +1,28 @@
+{
+    "hooks":[
+        {
+            "name":"dw.system.request.onSession",
+            "script":"./cartridge/scripts/ass24.js"
+        },
+        {
+            "name":"dw.system.request.onRequest",
+            "script":"./cartridge/scripts/ass24.js"
+        },
+        {
+            "name":"jiva.sfcc.trainig.basketDetails",
+            "script":"./cartridge/scripts/productBasket.js"
+        },
+        {
+            "name":"jiva.sfcc.training.Ass20",
+            "script":"./cartridge/scripts/ass20p.js"
+        },
+        {
+            "name":"jiva.sfcc.training.getProduct",
+            "script":"./cartridge/scripts/ass20p.js"
+        },
+        {
+            "name":"jiva.sfcc.training.getBasket",
+            "script":"./cartridge/scripts/ass20p.js"
+        }
+    ]
+}

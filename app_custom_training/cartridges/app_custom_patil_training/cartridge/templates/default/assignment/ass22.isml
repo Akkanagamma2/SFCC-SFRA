@@ -1,0 +1,45 @@
+<style>
+    div{
+        padding:10px;
+        margin-top:5px;
+    }
+    h2{
+        padding-left:15px;
+    }
+</style>
+
+<h2>${Resource.msg("label.form.loginForm","ass22",null)}</h2>
+
+<form action="${pdict.action}" method="post">
+    <div>
+        <label for="emailAdd">${Resource.msg("label.form.emailAddress","ass22",null)}</label>
+        <input type="email" name="email" id="emailAdd" maxlength="50" minlength="5" required>
+    </div>
+
+    <div>
+        <label for="Fname">${Resource.msg("label.form.firstName","ass22",null)}</label>
+        <input type="text" name="firstname" id="Fname" minlength="5" maxlength="50" required>
+    </div>
+
+    <div>
+        <label for="Lname">${Resource.msg("label.form.lasttName","ass22",null)}</label>
+        <input type="text" name="lastname" value="" id="Lname" minlength="5" maxlength="50" required>
+    </div>
+
+    <div>
+        <label for="">${Resource.msg("label.form.category","ass22",null)}</label>
+
+        <input type="checkbox" name="mens" value="true">
+        <label for="">${Resource.msg("label.form.mens","ass22",null)}</label>
+        <input type="checkbox" name="womens" value="true">
+        <label for="">${Resource.msg("label.form.womens","ass22",null)}</label>
+        <input type="checkbox" name="electronics" value="true">
+        <label for="">${Resource.msg("label.form.electronic","ass22",null)}</label>
+    </div>
+
+    
+
+    <div>
+        <button type="submit">${Resource.msg("label.form.submit","ass22",null)}</button>
+    </div>
+</form>

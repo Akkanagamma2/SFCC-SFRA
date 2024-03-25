@@ -1,0 +1,19 @@
+
+<iscomment> <h1>${"ID : "+pdict.productID.getProductObjectId(pdict.CurrentHttpParameterMap.pid.value)}</h1>
+<h1>${"Name : "+pdict.productID.getProductObjectName(pdict.CurrentHttpParameterMap.pid.value)}</h1>
+<h1>${"Brand : "+pdict.productID.getProductObjectBrand(pdict.CurrentHttpParameterMap.pid.value)}</h1>
+<h1>${"Color : "+pdict.productID.getProductObjectColor(pdict.CurrentHttpParameterMap.pid.value)}</h1> </iscomment>
+
+<iscomment> <h1>${pdict.ID}</h1>
+<h1>${pdict.name}</h1>
+<h1>${pdict.brand}</h1> </iscomment>
+
+<iscomment> <h1>${pdict.mess}</h1>
+<h1>${pdict.id}</h1>
+<h1>${pdict.name}</h1> </iscomment>
+
+<h1>${pdict.Object.Id(pdict.CurrentHttpParameterMap.pid.value)}</h1>
+<h1>${pdict.Object.Name(pdict.CurrentHttpParameterMap.pid.value)}</h1>
+<h1>${pdict.Object.Brand(pdict.CurrentHttpParameterMap.pid.value)}</h1>
+
+

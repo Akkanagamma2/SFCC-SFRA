@@ -1,0 +1,4 @@
+<ismodule template="customTag/productInfo" name="productDetail"
+            attribute="id" attribute="name" attribute="brand"/>
+
+<isinclude template="assignment/assn10" sf-toolkit="on" />

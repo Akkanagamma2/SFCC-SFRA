@@ -1,0 +1,76 @@
+<isdecorate template="common/layout/page">
+
+    <style>
+        h2{
+            font-family:'Acme', sans-serif;
+            padding:20px 0 0 20px;
+            font-weight:20px;
+            color:#305C96;
+        }
+        table{
+            margin:20px;
+            width:70%;
+            height:50px;
+            text-align:center;
+        }
+        table, th, td{
+            border:2px solid black;
+            padding:5px;
+        }
+        table th{
+            color:#80036B;
+            font-size:20px;
+        }
+        h4{
+            font-family:'Acme', sans-serif;
+            padding:5px 0 0 20px;
+            font-weight:20px;
+        }
+    </style>
+
+     <isinclude template="/components/modules" sf-toolkit="on" />
+
+    <h2>Customer Address Details</h2>
+    <table>
+        <tr>
+            <th colspan="8"><iscontentasset aid="CustomerAddr_patil" /></th>
+
+        </tr>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>address1</th>
+            <th>address2</th>
+            <th>city</th>
+            <th>state</th>
+            <th>country</th>
+        </tr>
+
+         <isloop items="${pdict.address}" var="plg" status="loopstatus">
+            <tr>
+
+                    <td><isprint value="${plg.ID}" encoding="on" /></td>
+                    <td><isprint value="${plg.firstName}" encoding="on" /></td>
+                    <td><isprint value="${plg.lastName}" encoding="on" /></td>
+                    <td><isprint value="${plg.address1}" encoding="on" /></td>
+                    <td><isprint value="${plg.address2}" encoding="on" /></td>
+                    <td><isprint value="${plg.city}" encoding="on" /></td>
+                    <td><isprint value="${plg.stateCode}" encoding="on" /></td>
+                    <td><isprint value="${plg.countryCode.displayValue}" encoding="on" /></td>
+
+            </tr>
+        </isloop>
+    </table>
+
+</isdecorate>
+
+
+
+
+
+
+
+
+
+

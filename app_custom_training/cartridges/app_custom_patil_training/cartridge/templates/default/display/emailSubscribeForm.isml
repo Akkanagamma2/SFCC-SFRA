@@ -1,0 +1,17 @@
+<isdecorate template="common/layout/page">
+    <h1>Email Subscription form</h1>
+    <form action="${URLUtils.url("EmailSubscribe-Confirm")}">
+        EmailAddress : <input type="text" name="email" value=""><br><br>
+        FirstName : <input type="text" name="fname" value=""><br><br>
+        LastName : <input type="text" name="lname" value=""><br><br>
+        Gender : 
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="male"> male
+        <br><br>
+        updates : <input type="checkbox" name="update" value="true"> Need Updates?<br><br>
+        <input type="submit" name="Submit" value="Subscribe">
+    </form>
+
+
+
+</isdecorate>

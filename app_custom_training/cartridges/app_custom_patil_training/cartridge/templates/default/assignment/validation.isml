@@ -1,0 +1,61 @@
+<isdecorate template="common/layout/page">
+
+
+<form action="https://zylt-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-RefArch-Site/en_US/Validationfun-Thank" method="post">
+
+    <div class="form-group
+        <isif condition="${!!pdict.sub.firstname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-fname">
+            <isprint value="${pdict.sub.firstname.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-fname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-fname-error"
+            <isprint value=${pdict.sub.firstname.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-fname-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.sub.lastname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-lname">
+            <isprint value="${pdict.sub.lastname.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-lname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-lname-error"
+            <isprint value=${pdict.sub.lastname.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-lname-error"></div>
+    </div>
+
+
+    <div class="form-group
+        <isif condition="${!!pdict.sub.email.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-email">
+             <isprint value="${pdict.sub.email.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-email"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-email-error"
+            <isprint value=${pdict.sub.email.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-email-error"></div>
+    </div>
+    
+    <div>
+        <input type="submit" name="Submit" value="Submit">
+    </div>
+    
+</form>
+</isdecorate>

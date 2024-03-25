@@ -1,0 +1,4 @@
+
+<label for="frontText">${Resource.msg('label.frontText', 'common', null)}</label>
+<input class="frontText-select form-control" type="text" id="frontText_p" name="frontText" maxlength="${product.frontTextLength_P}" value="">
+

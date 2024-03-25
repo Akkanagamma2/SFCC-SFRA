@@ -1,0 +1,58 @@
+<isdecorate template="common/layout/page">
+
+    <style>
+        h2{
+            font-family:'Acme', sans-serif;
+            padding:20px 0 0 20px;
+            font-weight:20px;
+            color:#305C96;
+        }
+        table{
+            margin:20px;
+            width:70%;
+            height:50px;
+            text-align:center;
+        }
+        table, th, td{
+            border:2px solid black;
+            padding:5px;
+        }
+        table th{
+            color:#80036B;
+            font-size:20px;
+        }
+        h4{
+            font-family:'Acme', sans-serif;
+            padding:5px 0 0 20px;
+            font-weight:20px;
+        }
+    </style>
+
+    <h2>Order Details </h2>
+    <table> 
+        <tr>
+            <th>OrderNo</th>
+            <th>product Id</th>
+            <th>product Name</th>
+            <th>order_containsNewArrivals</th>
+            <th>productLineItem</th>
+            <th>Shipment</th>
+
+        </tr>
+
+        <isloop items="${pdict.orderList}" var="order" status="loopstatus">
+            <isloop items="${order.productLineItems}" var="prod" status="loopstatus">
+                <tr>
+                    <td><isprint value="${order.orderNo}" encoding="on" /></td>
+                    <td><isprint value="${prod.productID}" encoding="on" /></td>
+                    <td><isprint value="${prod.productName}" encoding="on" /></td>
+                    <td><isprint value="${order.custom.patilOrd_containsNewArrivals}" encoding="on" /></td>
+                    <td><isprint value="${prod.custom.patil_containsNewArrivals}" encoding="on" /></td>
+                    <isloop items="${order.shipments}" var="ship" status="loopstatus">
+                        <td><isprint value="${ship.custom.patilShipment_containsNewArrivals}" encoding="on" /></td>
+                    </isloop>
+                </tr>
+            </isloop>
+        </isloop>
+    </table>
+</isdecorate>

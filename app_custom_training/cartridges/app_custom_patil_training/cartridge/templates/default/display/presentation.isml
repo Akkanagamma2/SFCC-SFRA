@@ -1,0 +1,61 @@
+<isdecorate template="common/layout/page">
+
+<form action="${pdict.action}" method="get">
+
+    <div class="form-group
+        <isif condition="${!!pdict.subscribe.email.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-email">
+             <isprint value="${pdict.subscribe.email.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-email"
+            data-missing-error="${Resource.msg('address.email.missing','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-email-error"
+            <isprint value=${pdict.subscribe.email.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-email-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.subscribe.firstname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-fname">
+            <isprint value="${pdict.subscribe.firstname.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-fname"
+            data-missing-error="${Resource.msg('address.firstName.missing','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-fname-error"
+            <isprint value=${pdict.subscribe.firstname.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-fname-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.subscribe.lastname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-lname">
+            <isprint value="${pdict.subscribe.lastname.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-lname"
+            data-missing-error="${Resource.msg('address.lastName.missing','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-lname-error"
+            <isprint value=${pdict.subscribe.lastname.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-lname-error"></div>
+    </div>
+
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+
+
+    <button type="submit" class="btn btn-block btn-primary">
+        ${Resource.msg('button.click.subscribe', 'forms', null)}
+    </button>
+</form>
+</isdecorate>
